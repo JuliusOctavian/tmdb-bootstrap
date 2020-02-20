@@ -1,13 +1,16 @@
 <template>
   <div class="home">
-	home
+    <carousel></carousel>
   </div>
 </template>
 
 <script>
-export default {
-  name: 'Home',
-  components: {
+  import Carousel from "@/components/content/Carousel"
+
+  export default {
+    name: 'Home',
+    components: {
+      Carousel
+    }
   }
-}
 </script>
