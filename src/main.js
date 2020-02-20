@@ -5,6 +5,7 @@ import store from './store'
 
 import 'bootstrap'
 import 'bootstrap/dist/css/bootstrap.css'
+import 'font-awesome/css/font-awesome.min.css'
 
 Vue.config.productionTip = false
 

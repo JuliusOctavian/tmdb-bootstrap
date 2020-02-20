@@ -1,5 +1,5 @@
 <template>
-  $END$
+  <div class="upcome">up</div> 
 </template>
 
 <script>

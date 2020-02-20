@@ -5,15 +5,30 @@ import Home from '../views/Home.vue'
 Vue.use(VueRouter)
 
 const routes = [
-  {
-    path: '/',
-    name: 'Home',
-    component: Home
-  }
+{
+	path: '/home',
+	name: 'Home',
+	component: Home
+},
+{
+	path: '/',
+	redirect:"/home"
+},
+{
+	path: '/upcoming',
+	name: 'upcoming',
+	component: ()=> import ("@/views/UpComing")
+},
+{
+	path: '/nowplaying',
+	name: 'nowplaying',
+	component: ()=> import ("@/views/NowPlaying")
+}
 ]
 
 const router = new VueRouter({
-  routes
+	routes,
+	linkActiveClass:"active"
 })
 
 export default router

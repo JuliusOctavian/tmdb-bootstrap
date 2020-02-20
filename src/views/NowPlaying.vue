@@ -1,5 +1,5 @@
 <template>
-  $END$
+  <div class="nowplay">now</div> 
 </template>
 
 <script>
