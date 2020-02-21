@@ -1,7 +1,7 @@
 import axios from 'axios'
 // import qs from "qs"
 
-// axios.defaults.baseURL = "https://api.themoviedb.org/3";
+axios.defaults.baseURL = "https://api.themoviedb.org/3";
 axios.defaults.timeout = 5000;
 
 function fetch(url, params) {
@@ -16,7 +16,7 @@ function fetch(url, params) {
 }
 
 axios.interceptors.request.use((config) => {
-    console.log(config);
+    // console.log(config);
     return config;
 }, (error) => {
     console.log(error)
@@ -48,29 +48,29 @@ axios.interceptors.request.use((config) => {
 //
 // }
 
-//get upcoming data
-// export function getUpcoming(params) {
-//     return fetch("movie/now_playing",{params});
-// }
-//
-// //get nowplaying data
-// export function getNowPlaying(params) {
-//     return fetch("movie/upcoming",{params});
-// }
-
-//get upcoming data
+// get upcoming data
 export function getUpcoming(params) {
-    return fetch("http://localhost/tmdb/upcoming.php", {params});
+    return fetch("movie/now_playing",{params});
 }
 
 //get nowplaying data
 export function getNowPlaying(params) {
-    return fetch("http://localhost/tmdb/nowplaying.php", {params});
+    return fetch("movie/upcoming",{params});
 }
 
-
-export default {
-    searchMovie(params) {
-        return fetch("http://localhost/tmdb/searchmovie.php", {params})
-    }
-}
+// //get upcoming data
+// export function getUpcoming(params) {
+//     return fetch("http://localhost/tmdb/upcoming.php", {params});
+// }
+//
+// //get nowplaying data
+// export function getNowPlaying(params) {
+//     return fetch("http://localhost/tmdb/nowplaying.php", {params});
+// }
+//
+//
+// export default {
+//     searchMovie(params) {
+//         return fetch("http://localhost/tmdb/searchmovie.php", {params})
+//     }
+// }
