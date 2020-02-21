@@ -12,7 +12,8 @@ module.exports = {
 
             jQuery:"jquery",
 
-            "windows.jQuery":"jquery"
+            "windows.jQuery":"jquery",
+            'window.$': 'jquery'
 
           })
 
